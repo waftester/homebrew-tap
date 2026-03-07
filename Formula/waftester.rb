@@ -5,21 +5,21 @@
 class Waftester < Formula
   desc "WAF security testing CLI — detect, benchmark, and bypass web application firewalls"
   homepage "https://waftester.com"
-  version "2.9.47"
+  version "2.9.48"
   license "BSL-1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/waftester/waftester/releases/download/v2.9.47/waftester_Darwin_x86_64.tar.gz"
-      sha256 "d484f1feff6e0078dee12d51aa82eb86019d71ebb97e208fd05ca401bfcb0e0a"
+      url "https://github.com/waftester/waftester/releases/download/v2.9.48/waftester_Darwin_x86_64.tar.gz"
+      sha256 "29a84fc09a9b369f77fd99230928fdde6ba7220bd88107b950e623ed00260b65"
 
       define_method(:install) do
         bin.install "waf-tester"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/waftester/waftester/releases/download/v2.9.47/waftester_Darwin_arm64.tar.gz"
-      sha256 "addadf140c2e7694dc7163295d6948656ffa730fab27628c69ec22b1f0eb7e48"
+      url "https://github.com/waftester/waftester/releases/download/v2.9.48/waftester_Darwin_arm64.tar.gz"
+      sha256 "fff80a17397eda020e7ae301c36bb4b78c116974ff1b03051e65897b2d425fe4"
 
       define_method(:install) do
         bin.install "waf-tester"
@@ -29,15 +29,15 @@ class Waftester < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/waftester/waftester/releases/download/v2.9.47/waftester_Linux_x86_64.tar.gz"
-      sha256 "cc904557a1f038ced3a5e9e37ec60372abb06cb1fd3de96f8c076dc4189aa29f"
+      url "https://github.com/waftester/waftester/releases/download/v2.9.48/waftester_Linux_x86_64.tar.gz"
+      sha256 "687d884684fca212483d7c0fb26feb447b1866fe64a050828968b26974343bef"
       define_method(:install) do
         bin.install "waf-tester"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/waftester/waftester/releases/download/v2.9.47/waftester_Linux_arm64.tar.gz"
-      sha256 "f0b18f06fbca7b49121f289eecaa8127202ce429d783dbb54ff35ed2fe012ab2"
+      url "https://github.com/waftester/waftester/releases/download/v2.9.48/waftester_Linux_arm64.tar.gz"
+      sha256 "894596c9761787e60d46a373cd8ede9416d746b9e6fdc317a994613d3ac58b18"
       define_method(:install) do
         bin.install "waf-tester"
       end
